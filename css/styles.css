@@ -660,12 +660,15 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 20px;
+  padding: 72px 24px 24px;
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
 }
 .modal-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
   padding: 0;
   margin: 0;
   border: 0;
@@ -673,11 +676,16 @@ footer {
   height: 24px;
   background-color: rgba(0, 0, 0, 0);
   display: block;
-  margin-left: auto;
+}
+.modal-icon{
+  border-radius: 50%;
+  background-color: #E7E9FC;
+  fill: #2E2F42;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn:hover .modal-icon,
 .modal-btn:active .modal-icon {
-  border-radius: 50%;
+
   background-color: #404bbf;
   fill: #ffffff;
 }
@@ -694,7 +702,6 @@ footer {
   text-align: center;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  margin-top: 24px;
   margin-bottom: 16px;
 }
 
@@ -747,9 +754,12 @@ footer {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
+.textarea-label-modal{
+  margin-top: 0;
+}
 .textarea-modal {
-  opacity: 0.2;
-  border: 1px solid #2e2f42;
+  opacity: 0.4;
+  border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   outline: transparent;
   width: 100%;
@@ -757,8 +767,16 @@ footer {
   padding-top: 8px;
   padding-left: 16px;
   resize: none;
-  margin-bottom: 4px;
+  margin-bottom: 16px;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.textarea-modal::placeholder{
+  font-weight: 400;
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.04em;
+color: #2E2F42;
+
 }
 .textarea-modal:focus {
   opacity: 1;
